@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZEKSSTORE - Free Fire Top-up</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              surface: "#f8f9fb",
+              background: "#f8f9fb",
+              outline: "#76777d",
+              "outline-variant": "#c6c6cd",
+              "surface-container": "#edeef0",
+              "surface-container-low": "#f3f4f6",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e1e2e4",
+              "on-surface": "#191c1e",
+              "on-surface-variant": "#45464c",
+              "on-primary": "#ffffff",
+            },
+
+            spacing: {
+              xs: "4px",
+              sm: "12px",
+              md: "24px",
+              lg: "48px",
+              xl: "80px",
+              "container-max": "1280px",
+            },
+
+            borderRadius: {
+              lg: "8px",
+              xl: "16px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      .payment-card.active,
+      .diamond-card.active {
+        border-color: black;
+        background: #f3f4f6;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background text-on-surface">
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between"
+      >
+        <!-- LOGO -->
+        <a href="index.html" class="text-2xl font-bold tracking-tight">
+          ZEKSSTORE
+        </a>
+
+        <!-- MENU DESKTOP -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="index.html"
+            class="text-gray-600 hover:text-black transition"
+          >
+            Home
+          </a>
+
+          <a
+            href="history.html"
+            class="text-gray-600 hover:text-black transition"
+          >
+            History
+          </a>
+
+          <a
+            href="gameDetail.html"
+            class="text-gray-600 hover:text-black transition"
+          >
+            Games
+          </a>
+
+          <a
+            href="payment.html"
+            class="font-semibold border-b-2 border-black pb-1"
+          >
+            Payment
+          </a>
+        </div>
+
+        <!-- BUTTON -->
+        <a
+          href="payment.html"
+          class="bg-black text-white px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition"
+        >
+          Login
+        </a>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main
+      class="max-w-container-max mx-auto px-md pt-[110px] pb-xl flex flex-col lg:flex-row gap-md"
+    >
+      <!-- SIDEBAR -->
+      <aside class="w-full lg:w-[320px] shrink-0">
+        <div
+          class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md sticky top-[100px]"
+        >
+          <div
+            class="aspect-video rounded-xl overflow-hidden bg-surface-container mb-md"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-full object-cover"
+              alt="Free Fire"
+            />
+          </div>
+
+          <h1 class="text-3xl font-bold mb-1">Free Fire</h1>
+
+          <p class="text-on-surface-variant mb-md">Garena</p>
+
+          <div class="space-y-sm">
+            <div class="flex items-start gap-sm">
+              <span class="material-symbols-outlined text-primary"> info </span>
+
+              <p class="text-sm text-on-surface-variant">
+                Top-up Diamond Free Fire instant dalam hitungan detik.
+              </p>
+            </div>
+
+            <div class="flex items-start gap-sm">
+              <span class="material-symbols-outlined text-primary">
+                verified
+              </span>
+
+              <p class="text-sm text-on-surface-variant">
+                Proses cepat, aman, dan support 24 jam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CONTENT -->
+      <section class="flex-1 space-y-md">
+        <!-- STEP 1 -->
+        <div
+          class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md"
+        >
+          <div class="flex items-center gap-sm mb-md">
+            <div
+              class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold"
+            >
+              1
+            </div>
+
+            <h2 class="text-xl font-bold">Masukkan User ID</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-md">
+            <div>
+              <label class="block mb-2 text-sm text-on-surface-variant">
+                User ID
+              </label>
+
+              <input
+                id="userId"
+                type="text"
+                placeholder="Contoh: 12345678"
+                class="w-full border border-outline-variant rounded-lg px-4 py-3 bg-surface focus:border-primary outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block mb-2 text-sm text-on-surface-variant">
+                Zone ID
+              </label>
+
+              <input
+                id="zoneId"
+                type="text"
+                placeholder="Contoh: 1234"
+                class="w-full border border-outline-variant rounded-lg px-4 py-3 bg-surface focus:border-primary outline-none"
+              />
+            </div>
+          </div>
+
+          <p class="mt-sm text-sm text-on-surface-variant">
+            Pastikan User ID dan Zone ID benar.
+          </p>
+        </div>
+
+        <!-- STEP 2 -->
+        <div
+          class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md"
+        >
+          <div class="flex items-center gap-sm mb-md">
+            <div
+              class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold"
+            >
+              2
+            </div>
+
+            <h2 class="text-xl font-bold">Pilih Nominal</h2>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-sm">
+            <button
+              class="diamond-card active border-2 rounded-xl p-md text-left transition"
+              data-name="50 Diamonds"
+              data-price="8000"
+            >
+              <div class="text-lg font-bold">50 Diamonds</div>
+              <div class="text-sm text-on-surface-variant mt-1">Rp 8.000</div>
+            </button>
+
+            <button
+              class="diamond-card border border-outline-variant rounded-xl p-md text-left hover:border-primary transition"
+              data-name="100 Diamonds"
+              data-price="16000"
+            >
+              <div class="text-lg font-bold">100 Diamonds</div>
+              <div class="text-sm text-on-surface-variant mt-1">Rp 16.000</div>
+            </button>
+
+            <button
+              class="diamond-card border border-outline-variant rounded-xl p-md text-left hover:border-primary transition"
+              data-name="355 Diamonds"
+              data-price="50000"
+            >
+              <div class="text-lg font-bold">355 Diamonds</div>
+              <div class="text-sm text-on-surface-variant mt-1">Rp 50.000</div>
+            </button>
+
+            <button
+              class="diamond-card border border-outline-variant rounded-xl p-md text-left hover:border-primary transition"
+              data-name="720 Diamonds"
+              data-price="100000"
+            >
+              <div class="text-lg font-bold">720 Diamonds</div>
+              <div class="text-sm text-on-surface-variant mt-1">Rp 100.000</div>
+            </button>
+
+            <button
+              class="diamond-card border border-outline-variant rounded-xl p-md text-left hover:border-primary transition"
+              data-name="1450 Diamonds"
+              data-price="200000"
+            >
+              <div class="text-lg font-bold">1450 Diamonds</div>
+              <div class="text-sm text-on-surface-variant mt-1">Rp 200.000</div>
+            </button>
+
+            <button
+              class="diamond-card border border-outline-variant rounded-xl p-md text-left hover:border-primary transition"
+              data-name="2180 Diamonds"
+              data-price="300000"
+            >
+              <div class="text-lg font-bold">2180 Diamonds</div>
+              <div class="text-sm text-on-surface-variant mt-1">Rp 300.000</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div
+          class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md"
+        >
+          <div class="flex items-center gap-sm mb-md">
+            <div
+              class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold"
+            >
+              3
+            </div>
+
+            <h2 class="text-xl font-bold">Pilih Pembayaran</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-sm">
+            <button
+              class="payment-card active border-2 rounded-xl p-md flex items-center justify-between transition"
+              data-method="QRIS"
+            >
+              <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined"> qr_code_2 </span>
+
+                <span class="font-medium">QRIS</span>
+              </div>
+
+              <span>Rp 8.000</span>
+            </button>
+
+            <button
+              class="payment-card border border-outline-variant rounded-xl p-md flex items-center justify-between hover:border-primary transition"
+              data-method="GoPay"
+            >
+              <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined">
+                  account_balance_wallet
+                </span>
+
+                <span class="font-medium">GoPay</span>
+              </div>
+
+              <span>Rp 8.000</span>
+            </button>
+
+            <button
+              class="payment-card border border-outline-variant rounded-xl p-md flex items-center justify-between hover:border-primary transition"
+              data-method="BCA VA"
+            >
+              <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined"> account_balance </span>
+
+                <span class="font-medium">BCA VA</span>
+              </div>
+
+              <span>Rp 8.000</span>
+            </button>
+
+            <button
+              class="payment-card border border-outline-variant rounded-xl p-md flex items-center justify-between hover:border-primary transition"
+              data-method="ShopeePay"
+            >
+              <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined"> payments </span>
+
+                <span class="font-medium">ShopeePay</span>
+              </div>
+
+              <span>Rp 8.000</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- TOTAL -->
+        <div
+          class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col md:flex-row gap-md items-center justify-between"
+        >
+          <div class="text-center md:text-left">
+            <p class="text-sm text-on-surface-variant">Total Pembayaran</p>
+
+            <h2 id="totalPrice" class="text-3xl font-bold">Rp 8.000</h2>
+          </div>
+
+          <button
+            id="buyBtn"
+            class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-xl text-lg font-bold hover:opacity-90 active:scale-95 transition"
+          >
+            Beli Sekarang
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-surface-container border-t border-outline-variant mt-xl">
+      <div
+        class="max-w-container-max mx-auto px-md py-md flex flex-col md:flex-row items-center justify-between gap-md"
+      >
+        <div class="text-center md:text-left">
+          <h2 class="text-xl font-bold">ZEKSSTORE</h2>
+
+          <p class="text-sm text-on-surface-variant mt-1">
+            © 2026 ZEKSSTORE PLATFORM
+          </p>
+        </div>
+
+        <div class="flex gap-md text-sm">
+          <a href="#" class="hover:text-primary transition"> Terms </a>
+
+          <a href="#" class="hover:text-primary transition"> Privacy </a>
+
+          <a href="#" class="hover:text-primary transition"> Contact </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+      const diamondCards = document.querySelectorAll(".diamond-card");
+      const paymentCards = document.querySelectorAll(".payment-card");
+      const totalPrice = document.getElementById("totalPrice");
+      const buyBtn = document.getElementById("buyBtn");
+
+      let selectedDiamond = "50 Diamonds";
+      let selectedPrice = 8000;
+      let selectedPayment = "QRIS";
+
+      // SELECT DIAMOND
+      diamondCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          diamondCards.forEach((c) => {
+            c.classList.remove("active", "border-2");
+            c.classList.add("border");
+          });
+
+          card.classList.add("active", "border-2");
+
+          selectedDiamond = card.dataset.name;
+          selectedPrice = parseInt(card.dataset.price);
+
+          updatePrice();
+        });
+      });
+
+      // SELECT PAYMENT
+      paymentCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          paymentCards.forEach((c) => {
+            c.classList.remove("active", "border-2");
+            c.classList.add("border");
+          });
+
+          card.classList.add("active", "border-2");
+
+          selectedPayment = card.dataset.method;
+        });
+      });
+
+      // UPDATE PRICE
+      function updatePrice() {
+        totalPrice.innerText = "Rp " + selectedPrice.toLocaleString("id-ID");
+
+        paymentCards.forEach((card) => {
+          card.querySelector("span:last-child").innerText =
+            "Rp " + selectedPrice.toLocaleString("id-ID");
+        });
+      }
+
+      // BUY BUTTON
+      buyBtn.addEventListener("click", () => {
+        const userId = document.getElementById("userId").value;
+        const zoneId = document.getElementById("zoneId").value;
+
+        if (!userId || !zoneId) {
+          alert("Masukkan User ID dan Zone ID!");
+          return;
+        }
+
+        alert(
+          `Pembelian berhasil!\n\nGame: Free Fire\nItem: ${selectedDiamond}\nPembayaran: ${selectedPayment}\nTotal: Rp ${selectedPrice.toLocaleString(
+            "id-ID",
+          )}`,
+        );
+      });
+    </script>
+  </body>
+</html>

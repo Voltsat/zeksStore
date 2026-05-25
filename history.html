@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>History - ZEKSSTORE</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900">
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between"
+      >
+        <!-- LOGO -->
+        <a href="index.html" class="text-2xl font-bold tracking-tight">
+          ZEKSSTORE
+        </a>
+
+        <!-- MENU -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="index.html"
+            class="text-gray-600 hover:text-black transition"
+          >
+            Home
+          </a>
+
+          <a
+            href="history.html"
+            class="font-semibold border-b-2 border-black pb-1"
+          >
+            History
+          </a>
+
+          <a
+            href="gameDetail.html"
+            class="text-gray-600 hover:text-black transition"
+          >
+            Games
+          </a>
+
+          <a
+            href="payment.html"
+            class="text-gray-600 hover:text-black transition"
+          >
+            Payment
+          </a>
+        </div>
+
+        <!-- BUTTON -->
+        <a
+          href="payment.html"
+          class="bg-black text-white px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition"
+        >
+          Login
+        </a>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-8">
+      <!-- HEADER -->
+      <section
+        class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-10"
+      >
+        <div>
+          <h1 class="text-3xl md:text-5xl font-bold">Riwayat Transaksi</h1>
+
+          <p class="text-gray-600 mt-3 max-w-2xl">
+            Kelola dan tinjau semua aktivitas transaksi game Anda secara
+            real-time.
+          </p>
+        </div>
+
+        <!-- STATS -->
+        <div class="flex gap-4">
+          <div class="bg-white border rounded-2xl px-6 py-4 min-w-[140px]">
+            <p class="text-sm text-gray-500">Total Sukses</p>
+
+            <h2 class="text-3xl font-bold mt-1">142</h2>
+          </div>
+
+          <div class="bg-white border rounded-2xl px-6 py-4 min-w-[140px]">
+            <p class="text-sm text-gray-500">Menunggu</p>
+
+            <h2 class="text-3xl font-bold mt-1">3</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILTER -->
+      <section class="bg-white border rounded-3xl p-5 md:p-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+          <!-- SEARCH -->
+          <div>
+            <label class="text-sm text-gray-500 mb-2 block">
+              Cari Transaksi
+            </label>
+
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+              >
+                search
+              </span>
+
+              <input
+                type="text"
+                placeholder="ID atau Nama Game..."
+                class="w-full border rounded-xl py-3 pl-12 pr-4 outline-none focus:border-black transition"
+              />
+            </div>
+          </div>
+
+          <!-- STATUS -->
+          <div>
+            <label class="text-sm text-gray-500 mb-2 block"> Status </label>
+
+            <select
+              class="w-full border rounded-xl py-3 px-4 outline-none focus:border-black transition"
+            >
+              <option>Semua Status</option>
+              <option>Berhasil</option>
+              <option>Menunggu</option>
+              <option>Gagal</option>
+            </select>
+          </div>
+
+          <!-- DATE -->
+          <div>
+            <label class="text-sm text-gray-500 mb-2 block"> Tanggal </label>
+
+            <input
+              type="date"
+              class="w-full border rounded-xl py-3 px-4 outline-none focus:border-black transition"
+            />
+          </div>
+
+          <!-- BUTTON -->
+          <div class="flex items-end">
+            <button
+              class="w-full bg-black text-white rounded-xl py-3 font-semibold hover:opacity-90 transition"
+            >
+              Terapkan Filter
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TABLE DESKTOP -->
+      <section
+        class="hidden md:block bg-white border rounded-3xl overflow-hidden"
+      >
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead class="bg-gray-50 border-b">
+              <tr class="text-left">
+                <th class="px-6 py-4 text-sm text-gray-500">ID</th>
+
+                <th class="px-6 py-4 text-sm text-gray-500">Game</th>
+
+                <th class="px-6 py-4 text-sm text-gray-500">Tanggal</th>
+
+                <th class="px-6 py-4 text-sm text-gray-500">Harga</th>
+
+                <th class="px-6 py-4 text-sm text-gray-500">Status</th>
+
+                <th class="px-6 py-4 text-sm text-gray-500 text-right">Aksi</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- ITEM -->
+              <tr class="border-b hover:bg-gray-50 transition">
+                <td class="px-6 py-5 font-semibold">#GT-882</td>
+
+                <td class="px-6 py-5">
+                  <div class="flex items-center gap-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400&auto=format&fit=crop"
+                      class="w-14 h-14 rounded-xl object-cover"
+                    />
+
+                    <div>
+                      <h3 class="font-semibold">Mobile Legends</h3>
+
+                      <p class="text-sm text-gray-500">Weekly Diamond Pass</p>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="px-6 py-5 text-gray-600">24 Mei 2026</td>
+
+                <td class="px-6 py-5 font-bold">Rp 30.000</td>
+
+                <td class="px-6 py-5">
+                  <span
+                    class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-semibold"
+                  >
+                    Berhasil
+                  </span>
+                </td>
+
+                <td class="px-6 py-5 text-right">
+                  <a
+                    href="gameDetail.html"
+                    class="border px-4 py-2 rounded-xl hover:bg-gray-100 transition"
+                  >
+                    Detail
+                  </a>
+                </td>
+              </tr>
+
+              <!-- ITEM -->
+              <tr class="border-b hover:bg-gray-50 transition">
+                <td class="px-6 py-5 font-semibold">#GT-712</td>
+
+                <td class="px-6 py-5">
+                  <div class="flex items-center gap-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=400&auto=format&fit=crop"
+                      class="w-14 h-14 rounded-xl object-cover"
+                    />
+
+                    <div>
+                      <h3 class="font-semibold">Valorant</h3>
+
+                      <p class="text-sm text-gray-500">1125 Points</p>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="px-6 py-5 text-gray-600">24 Mei 2026</td>
+
+                <td class="px-6 py-5 font-bold">Rp 120.000</td>
+
+                <td class="px-6 py-5">
+                  <span
+                    class="bg-orange-100 text-orange-700 px-4 py-1 rounded-full text-sm font-semibold"
+                  >
+                    Menunggu
+                  </span>
+                </td>
+
+                <td class="px-6 py-5 text-right">
+                  <a
+                    href="gameDetail.html"
+                    class="border px-4 py-2 rounded-xl hover:bg-gray-100 transition"
+                  >
+                    Detail
+                  </a>
+                </td>
+              </tr>
+
+              <!-- ITEM -->
+              <tr class="hover:bg-gray-50 transition">
+                <td class="px-6 py-5 font-semibold">#GT-404</td>
+
+                <td class="px-6 py-5">
+                  <div class="flex items-center gap-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=400&auto=format&fit=crop"
+                      class="w-14 h-14 rounded-xl object-cover"
+                    />
+
+                    <div>
+                      <h3 class="font-semibold">Genshin Impact</h3>
+
+                      <p class="text-sm text-gray-500">60 Genesis Crystal</p>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="px-6 py-5 text-gray-600">23 Mei 2026</td>
+
+                <td class="px-6 py-5 font-bold">Rp 15.000</td>
+
+                <td class="px-6 py-5">
+                  <span
+                    class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-sm font-semibold"
+                  >
+                    Gagal
+                  </span>
+                </td>
+
+                <td class="px-6 py-5 text-right">
+                  <a
+                    href="gameDetail.html"
+                    class="border px-4 py-2 rounded-xl hover:bg-gray-100 transition"
+                  >
+                    Detail
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- MOBILE CARD -->
+      <section class="md:hidden space-y-4">
+        <!-- CARD -->
+        <div class="bg-white border rounded-3xl p-5">
+          <div class="flex gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400&auto=format&fit=crop"
+              class="w-20 h-20 rounded-2xl object-cover"
+            />
+
+            <div class="flex-1">
+              <div class="flex justify-between gap-3">
+                <div>
+                  <h3 class="font-bold">Mobile Legends</h3>
+
+                  <p class="text-sm text-gray-500">Weekly Diamond Pass</p>
+                </div>
+
+                <span
+                  class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs h-fit font-semibold"
+                >
+                  Berhasil
+                </span>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-sm text-gray-500">#GT-882</p>
+
+                <h2 class="font-bold text-lg mt-1">Rp 30.000</h2>
+
+                <p class="text-sm text-gray-500 mt-1">24 Mei 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="gameDetail.html"
+            class="mt-5 block text-center border rounded-xl py-3 hover:bg-gray-100 transition"
+          >
+            Detail
+          </a>
+        </div>
+      </section>
+
+      <!-- PAGINATION -->
+      <section
+        class="flex flex-col md:flex-row items-center justify-between gap-4 mt-8"
+      >
+        <p class="text-sm text-gray-500">Menampilkan 1-4 dari 142 transaksi</p>
+
+        <div class="flex gap-2">
+          <button class="w-10 h-10 border rounded-xl hover:bg-white transition">
+            <
+          </button>
+
+          <button class="w-10 h-10 bg-black text-white rounded-xl">1</button>
+
+          <button class="w-10 h-10 border rounded-xl hover:bg-white transition">
+            2
+          </button>
+
+          <button class="w-10 h-10 border rounded-xl hover:bg-white transition">
+            3
+          </button>
+
+          <button class="w-10 h-10 border rounded-xl hover:bg-white transition">
+            >
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t mt-16">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row gap-5 items-center justify-between"
+      >
+        <div>
+          <h2 class="font-bold text-xl">ZEKSSTORE</h2>
+
+          <p class="text-sm text-gray-500 mt-1">© 2026 ZEKSSTORE PLATFORM</p>
+        </div>
+
+        <div class="flex gap-5 text-sm text-gray-600">
+          <a href="#"> Terms </a>
+
+          <a href="#"> Privacy </a>
+
+          <a href="#"> Contact </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

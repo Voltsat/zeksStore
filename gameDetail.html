@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ZEKSSTORE - Semua Game</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              surface: "#f8f9fb",
+              background: "#f8f9fb",
+              outline: "#76777d",
+              "outline-variant": "#c6c6cd",
+              "surface-container": "#edeef0",
+              "surface-container-low": "#f3f4f6",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e1e2e4",
+              "on-surface": "#191c1e",
+              "on-surface-variant": "#45464c",
+              "on-primary": "#ffffff",
+            },
+
+            spacing: {
+              xs: "4px",
+              sm: "12px",
+              md: "24px",
+              lg: "48px",
+              xl: "80px",
+              "container-max": "1280px",
+            },
+
+            borderRadius: {
+              lg: "8px",
+              xl: "16px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      .game-card:hover img {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+
+  <body class="bg-background text-on-surface">
+    <!-- NAVBAR -->
+    <nav
+      class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50"
+    >
+      <div
+        class="max-w-container-max mx-auto px-md py-sm flex items-center justify-between"
+      >
+        <!-- LOGO -->
+        <a
+          href="index.html"
+          class="text-2xl font-bold tracking-tight text-primary"
+        >
+          ZEKSSTORE
+        </a>
+
+        <!-- MENU -->
+        <div class="hidden md:flex items-center gap-md">
+          <a
+            href="index.html"
+            class="text-on-surface-variant hover:text-primary transition"
+          >
+            Home
+          </a>
+
+          <a
+            href="history.html"
+            class="text-on-surface-variant hover:text-primary transition"
+          >
+            History
+          </a>
+
+          <!-- ACTIVE -->
+          <a
+            href="gameDetail.html"
+            class="text-primary font-semibold border-b-2 border-primary pb-1"
+          >
+            Games
+          </a>
+
+          <a
+            href="payment.html"
+            class="text-on-surface-variant hover:text-primary transition"
+          >
+            Payment
+          </a>
+        </div>
+
+        <!-- LOGIN BUTTON -->
+        <a
+          href="gameDetail.html"
+          class="bg-black text-white px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition"
+        >
+          Login
+        </a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="pt-[120px] pb-lg">
+      <div class="max-w-container-max mx-auto px-md">
+        <div
+          class="bg-surface-container-lowest border border-outline-variant rounded-3xl p-lg"
+        >
+          <p
+            class="text-sm uppercase tracking-[4px] text-on-surface-variant mb-sm"
+          >
+            Top Up Game
+          </p>
+
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-sm">
+            Semua Game Top Up
+          </h1>
+
+          <p
+            class="text-on-surface-variant max-w-[700px] leading-relaxed text-lg"
+          >
+            Top up game favorit kamu dengan proses cepat, aman, dan otomatis.
+            Pilih game yang ingin kamu isi sekarang.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="pb-md">
+      <div class="max-w-container-max mx-auto px-md">
+        <div class="relative">
+          <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant"
+          >
+            search
+          </span>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari game..."
+            class="w-full bg-surface-container-lowest border border-outline-variant rounded-2xl pl-14 pr-4 py-4 outline-none focus:border-primary"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME GRID -->
+    <main class="pb-xl">
+      <div
+        id="gameGrid"
+        class="max-w-container-max mx-auto px-md grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-md"
+      >
+        <!-- GAME 1 -->
+        <a
+          href="freefire.html"
+          class="game-card bg-surface-container-lowest border border-outline-variant rounded-3xl overflow-hidden hover:border-primary transition duration-300"
+        >
+          <div class="aspect-[4/5] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-full object-cover transition duration-500"
+              alt="Free Fire"
+            />
+          </div>
+
+          <div class="p-md">
+            <h2 class="font-bold text-xl">Free Fire</h2>
+
+            <p class="text-sm text-on-surface-variant mt-1">Garena</p>
+
+            <button
+              class="mt-md w-full bg-primary text-on-primary py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            >
+              Top Up
+            </button>
+          </div>
+        </a>
+
+        <!-- GAME 2 -->
+        <a
+          href="mobilelegends.html"
+          class="game-card bg-surface-container-lowest border border-outline-variant rounded-3xl overflow-hidden hover:border-primary transition duration-300"
+        >
+          <div class="aspect-[4/5] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-full object-cover transition duration-500"
+              alt="Mobile Legends"
+            />
+          </div>
+
+          <div class="p-md">
+            <h2 class="font-bold text-xl">Mobile Legends</h2>
+
+            <p class="text-sm text-on-surface-variant mt-1">Moonton</p>
+
+            <button
+              class="mt-md w-full bg-primary text-on-primary py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            >
+              Top Up
+            </button>
+          </div>
+        </a>
+
+        <!-- GAME 3 -->
+        <a
+          href="pubg.html"
+          class="game-card bg-surface-container-lowest border border-outline-variant rounded-3xl overflow-hidden hover:border-primary transition duration-300"
+        >
+          <div class="aspect-[4/5] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-full object-cover transition duration-500"
+              alt="PUBG"
+            />
+          </div>
+
+          <div class="p-md">
+            <h2 class="font-bold text-xl">PUBG Mobile</h2>
+
+            <p class="text-sm text-on-surface-variant mt-1">Tencent</p>
+
+            <button
+              class="mt-md w-full bg-primary text-on-primary py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            >
+              Top Up
+            </button>
+          </div>
+        </a>
+
+        <!-- GAME 4 -->
+        <a
+          href="valorant.html"
+          class="game-card bg-surface-container-lowest border border-outline-variant rounded-3xl overflow-hidden hover:border-primary transition duration-300"
+        >
+          <div class="aspect-[4/5] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-full object-cover transition duration-500"
+              alt="Valorant"
+            />
+          </div>
+
+          <div class="p-md">
+            <h2 class="font-bold text-xl">Valorant</h2>
+
+            <p class="text-sm text-on-surface-variant mt-1">Riot Games</p>
+
+            <button
+              class="mt-md w-full bg-primary text-on-primary py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            >
+              Top Up
+            </button>
+          </div>
+        </a>
+
+        <!-- GAME 5 -->
+        <a
+          href="genshin.html"
+          class="game-card bg-surface-container-lowest border border-outline-variant rounded-3xl overflow-hidden hover:border-primary transition duration-300"
+        >
+          <div class="aspect-[4/5] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-full object-cover transition duration-500"
+              alt="Genshin Impact"
+            />
+          </div>
+
+          <div class="p-md">
+            <h2 class="font-bold text-xl">Genshin Impact</h2>
+
+            <p class="text-sm text-on-surface-variant mt-1">Hoyoverse</p>
+
+            <button
+              class="mt-md w-full bg-primary text-on-primary py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            >
+              Top Up
+            </button>
+          </div>
+        </a>
+
+        <!-- GAME 6 -->
+        <a
+          href="hok.html"
+          class="game-card bg-surface-container-lowest border border-outline-variant rounded-3xl overflow-hidden hover:border-primary transition duration-300"
+        >
+          <div class="aspect-[4/5] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1519669556878-63bdad8a1a49?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-full object-cover transition duration-500"
+              alt="Honor Of Kings"
+            />
+          </div>
+
+          <div class="p-md">
+            <h2 class="font-bold text-xl">Honor Of Kings</h2>
+
+            <p class="text-sm text-on-surface-variant mt-1">Tencent</p>
+
+            <button
+              class="mt-md w-full bg-primary text-on-primary py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            >
+              Top Up
+            </button>
+          </div>
+        </a>
+
+        <!-- GAME 7 -->
+        <a
+          href="codm.html"
+          class="game-card bg-surface-container-lowest border border-outline-variant rounded-3xl overflow-hidden hover:border-primary transition duration-300"
+        >
+          <div class="aspect-[4/5] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-full object-cover transition duration-500"
+              alt="CODM"
+            />
+          </div>
+
+          <div class="p-md">
+            <h2 class="font-bold text-xl">COD Mobile</h2>
+
+            <p class="text-sm text-on-surface-variant mt-1">Activision</p>
+
+            <button
+              class="mt-md w-full bg-primary text-on-primary py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            >
+              Top Up
+            </button>
+          </div>
+        </a>
+
+        <!-- GAME 8 -->
+        <a
+          href="roblox.html"
+          class="game-card bg-surface-container-lowest border border-outline-variant rounded-3xl overflow-hidden hover:border-primary transition duration-300"
+        >
+          <div class="aspect-[4/5] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-full object-cover transition duration-500"
+              alt="Roblox"
+            />
+          </div>
+
+          <div class="p-md">
+            <h2 class="font-bold text-xl">Roblox</h2>
+
+            <p class="text-sm text-on-surface-variant mt-1">Roblox Corp</p>
+
+            <button
+              class="mt-md w-full bg-primary text-on-primary py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            >
+              Top Up
+            </button>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-surface-container border-t border-outline-variant">
+      <div
+        class="max-w-container-max mx-auto px-md py-lg flex flex-col md:flex-row items-center justify-between gap-md"
+      >
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl font-bold">ZEKSSTORE</h2>
+
+          <p class="text-sm text-on-surface-variant mt-2">
+            © 2026 ZEKSSTORE PLATFORM
+          </p>
+        </div>
+
+        <div class="flex gap-md text-sm">
+          <a href="#" class="hover:text-primary transition">Terms</a>
+
+          <a href="#" class="hover:text-primary transition">Privacy</a>
+
+          <a href="#" class="hover:text-primary transition">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SEARCH SCRIPT -->
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const cards = document.querySelectorAll(".game-card");
+
+      searchInput.addEventListener("keyup", () => {
+        const value = searchInput.value.toLowerCase();
+
+        cards.forEach((card) => {
+          const text = card.innerText.toLowerCase();
+
+          if (text.includes(value)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

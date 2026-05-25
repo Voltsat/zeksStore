@@ -1,0 +1,383 @@
+<!doctype html>
+<html class="light" lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>ZEKSSTORE</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900">
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between"
+      >
+        <!-- LOGO -->
+        <a href="index.html" class="text-2xl font-bold tracking-tight">
+          ZEKSSTORE
+        </a>
+
+        <!-- MENU DESKTOP -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="index.html"
+            class="font-semibold border-b-2 border-black pb-1"
+          >
+            Home
+          </a>
+
+          <a
+            href="history.html"
+            class="text-gray-600 hover:text-black transition"
+          >
+            History
+          </a>
+
+          <a
+            href="gameDetail.html"
+            class="text-gray-600 hover:text-black transition"
+          >
+            Games
+          </a>
+
+          <a
+            href="payment.html"
+            class="text-gray-600 hover:text-black transition"
+          >
+            Payment
+          </a>
+        </div>
+
+        <!-- BUTTON -->
+        <a
+          href="payment.html"
+          class="bg-black text-white px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition"
+        >
+          Login
+        </a>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-6">
+      <!-- SEARCH -->
+      <section class="mb-10">
+        <div class="relative max-w-2xl mx-auto">
+          <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+          >
+            search
+          </span>
+
+          <input
+            type="text"
+            placeholder="Cari game favorit Anda..."
+            class="w-full bg-white border rounded-xl py-4 pl-14 pr-4 outline-none focus:border-black transition"
+          />
+        </div>
+      </section>
+
+      <!-- HERO -->
+      <section class="mb-14">
+        <div
+          class="relative overflow-hidden rounded-3xl h-[220px] md:h-[420px]"
+        >
+          <img
+            src="/images/bannerKece.png"
+            class="w-full h-full object-cover"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/20"
+          ></div>
+
+          <div
+            class="absolute inset-0 flex flex-col justify-center px-6 md:px-14"
+          >
+            <h1
+              class="text-white text-3xl md:text-6xl font-bold max-w-xl leading-tight"
+            >
+              Diskon Top Up Hingga 50%
+            </h1>
+
+            <p class="text-gray-200 mt-4 text-sm md:text-lg max-w-lg">
+              Gunakan kode promo ZEKSSTORE2024 untuk transaksi pertama kamu.
+            </p>
+
+            <a
+              href="payment.html"
+              class="mt-6 bg-white text-black w-fit px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+            >
+              Cek Sekarang
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORY -->
+      <section class="mb-10 overflow-x-auto">
+        <div class="flex gap-3 min-w-max">
+          <button class="bg-black text-white px-5 py-2 rounded-full">
+            Semua
+          </button>
+
+          <button
+            class="bg-white border px-5 py-2 rounded-full hover:border-black transition"
+          >
+            Action
+          </button>
+
+          <button
+            class="bg-white border px-5 py-2 rounded-full hover:border-black transition"
+          >
+            RPG
+          </button>
+
+          <button
+            class="bg-white border px-5 py-2 rounded-full hover:border-black transition"
+          >
+            MOBA
+          </button>
+
+          <button
+            class="bg-white border px-5 py-2 rounded-full hover:border-black transition"
+          >
+            Strategy
+          </button>
+
+          <button
+            class="bg-white border px-5 py-2 rounded-full hover:border-black transition"
+          >
+            Simulation
+          </button>
+        </div>
+      </section>
+
+      <!-- GAME SECTION -->
+      <section class="mb-16">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold">Game Populer</h2>
+
+          <a
+            href="gameDetail.html"
+            class="flex items-center gap-1 text-gray-600 hover:text-black"
+          >
+            Lihat Semua
+
+            <span class="material-symbols-outlined"> arrow_forward </span>
+          </a>
+        </div>
+
+        <!-- GRID -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5"
+        >
+          <!-- CARD -->
+          <a href="gameDetail.html" class="group">
+            <div
+              class="overflow-hidden rounded-2xl bg-white border hover:border-black transition"
+            >
+              <img
+                src="https://wallpaperaccess.com/full/3518004.jpg"
+                class="aspect-[3/4] w-full object-cover group-hover:scale-105 transition duration-300"
+              />
+            </div>
+
+            <h3 class="mt-3 font-semibold truncate">Mobile Legends</h3>
+
+            <p class="text-sm text-gray-500">Moonton</p>
+          </a>
+
+          <!-- CARD -->
+          <a href="gameDetail.html" class="group">
+            <div
+              class="overflow-hidden rounded-2xl bg-white border hover:border-black transition"
+            >
+              <img
+                src="https://images.tokopedia.net/blog-tokopedia-com/uploads/2019/09/game-free-fire.jpg"
+                class="aspect-[3/4] w-full object-cover group-hover:scale-105 transition duration-300"
+              />
+            </div>
+
+            <h3 class="mt-3 font-semibold truncate">Free Fire</h3>
+
+            <p class="text-sm text-gray-500">Garena</p>
+          </a>
+
+          <!-- CARD -->
+          <a href="gameDetail.html" class="group">
+            <div
+              class="overflow-hidden rounded-2xl bg-white border hover:border-black transition"
+            >
+              <img
+                src="https://static.vecteezy.com/system/resources/thumbnails/027/127/497/small/genshin-impact-logo-genshin-impact-icon-transparent-free-png.png"
+                class="aspect-[3/4] w-full object-cover group-hover:scale-105 transition duration-300"
+              />
+            </div>
+
+            <h3 class="mt-3 font-semibold truncate">Genshin Impact</h3>
+
+            <p class="text-sm text-gray-500">HoYoverse</p>
+          </a>
+
+          <!-- CARD -->
+          <a href="gameDetail.html" class="group">
+            <div
+              class="overflow-hidden rounded-2xl bg-white border hover:border-black transition"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/4/44/PlayerUnknown%27s_Battlegrounds_Mobile.webp"
+                class="aspect-[3/4] w-full object-cover group-hover:scale-105 transition duration-300"
+              />
+            </div>
+
+            <h3 class="mt-3 font-semibold truncate">PUBG Mobile</h3>
+
+            <p class="text-sm text-gray-500">Tencent</p>
+          </a>
+
+          <!-- CARD -->
+          <a href="gameDetail.html" class="group">
+            <div
+              class="overflow-hidden rounded-2xl bg-white border hover:border-black transition"
+            >
+              <img
+                src="https://i.pinimg.com/736x/cf/ae/88/cfae886e263126f685510e2f45b82970.jpg"
+                class="aspect-[3/4] w-full object-cover group-hover:scale-105 transition duration-300"
+              />
+            </div>
+
+            <h3 class="mt-3 font-semibold truncate">Valorant</h3>
+
+            <p class="text-sm text-gray-500">Riot Games</p>
+          </a>
+
+          <!-- CARD -->
+          <a href="gameDetail.html" class="group">
+            <div
+              class="overflow-hidden rounded-2xl bg-white border hover:border-black transition"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe6oSaOcwDf_U_PnXkYAJc9fTqaRFlVlan4A&s"
+                class="aspect-[3/4] w-full object-cover group-hover:scale-105 transition duration-300"
+              />
+            </div>
+
+            <h3 class="mt-3 font-semibold truncate">Call of Duty</h3>
+
+            <p class="text-sm text-gray-500">Activision</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- WHY US -->
+      <section class="bg-white rounded-3xl p-6 md:p-10 border mb-16">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <!-- LEFT -->
+          <div>
+            <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+              Transaksi Kilat, Keamanan Terjamin.
+            </h2>
+
+            <p class="text-gray-600 mt-5 text-lg">
+              Kami menyediakan layanan top up game tercepat dengan sistem
+              otomatis dan pembayaran aman.
+            </p>
+
+            <div class="mt-8 space-y-6">
+              <div class="flex gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined"> bolt </span>
+                </div>
+
+                <div>
+                  <h3 class="font-bold text-lg">Proses 1 Detik</h3>
+
+                  <p class="text-gray-600">
+                    Pesanan langsung diproses otomatis.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined"> security </span>
+                </div>
+
+                <div>
+                  <h3 class="font-bold text-lg">Aman & Terpercaya</h3>
+
+                  <p class="text-gray-600">
+                    Data dan transaksi terenkripsi aman.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop"
+              class="rounded-3xl w-full h-[300px] md:h-[500px] object-cover"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row gap-5 items-center justify-between"
+      >
+        <div>
+          <h2 class="font-bold text-xl">ZEKSSTORE</h2>
+
+          <p class="text-sm text-gray-500 mt-1">© 2026 ZEKSSTORE PLATFORM</p>
+        </div>
+
+        <div class="flex gap-5 text-sm text-gray-600">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
